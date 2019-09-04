@@ -1,3 +1,5 @@
 name = input('What is your name?\n')
+print "My name is Ricky"
+Hello
 print('Hi, %s.' % name)
 #WOWOWOWOOWOWOW WHATS WITH THE PERCENT SIGNS ITS BLOWWING MY MIND

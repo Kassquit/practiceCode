@@ -1,0 +1,10 @@
+total_sales = []
+total = 0;
+for i in range (7):
+  total_temp = float(input("How much did you sell on day " + str(i + 1) + " $"))
+  total_sales.append(total_temp)
+
+for j in range (7):
+  total += total_sales[j]
+
+print("The total sales value is $" + str(total))

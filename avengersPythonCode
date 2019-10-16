@@ -1,0 +1,41 @@
+import random
+
+def snap(list_to_snap):
+  count = 0
+  for i in range (len(list_to_snap)):
+    if (random.randint(0,1) == 1):
+      list_to_snap[i] = ''
+      count = count + 1;
+  for j in range (count):
+    list_to_snap.remove('')
+  return list_to_snap
+
+def only_one(list_to_monikaize):
+  return list_to_monikaize[random.randint(0,len(list_to_monikaize) - 1)]
+
+
+
+aidorus = []
+file1 = open("avengernames.txt","r") 
+listEnd = False;
+i = 0
+while (listEnd == False):
+  aidorus.append(file1.readline().rstrip('\n'))
+  if (aidorus[i] == ''):
+    listEnd = True
+    del aidorus[-1]
+  i = i + 1
+  
+print ('\n\nbefore alphabetized:')
+for j in range (len(aidorus)):
+  print ("This is an aidoru: " + aidorus[j])
+aidorus.sort()
+print ('\n\nafter alphabetized:')
+for k in range (len(aidorus)):
+  print ("This is an aidoru: " + aidorus[k])
+
+print ("\n\nOnly " + only_one(aidorus))
+aidorus = snap(aidorus)
+print ('\n\nafter snapping:')
+for l in range (len(aidorus)):
+  print (aidorus[l])

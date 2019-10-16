@@ -1,0 +1,17 @@
+class ATECH_Trashcans:
+  def __init__(self):
+    self.size = 50;
+    self.things_inside = 50;
+    self.location = "east wing";
+  def addTrash(self):
+    if (self.things_inside < self.size):
+      self.things_inside = self.things_inside + 1;
+    else:
+      print("There are too many things in this trash can!")
+
+jordan = ATECH_Trashcans();
+
+print("There are " + str(jordan.things_inside) + " things in Jordan.")
+jordan.addTrash();
+print("There are now " + str(jordan.things_inside) + " things in Jordan.")
+print("Jordan is in the" + str(jordan.location) + ".")
